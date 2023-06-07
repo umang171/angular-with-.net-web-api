@@ -1,0 +1,36 @@
+.outer{
+    height: 100%;
+    background: linear-gradient(to top,#c9c9ff 50%,#6e6ef6 90%);
+}
+.panel-heading{
+    text-align: center;
+    margin-bottom: 10px;
+}
+.links{
+    min-width: 100px;
+    margin-left: auto;
+    text-decoration: none;
+    cursor: pointer;
+}
+a:hover{
+
+}
+.btn{
+    border-radius: 15px;
+}
+.panel{
+    min-height: 300px;
+    box-shadow: 20px 20px 80px rgb(210, 210, 210);
+    border-radius: 12px;
+    margin-top: 100px;
+}
+.input-field{
+    padding:5px;    
+    cursor: pointer;
+    border: 1px solid white;
+    color: #4343ff;
+}
+.input-field .error{
+    border: 1px solid red;
+    color: red;
+}

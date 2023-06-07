@@ -1,0 +1,30 @@
+<nav class="navbar navbar-expand-lg bg-body-tertiary">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="#">Navbar</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+         
+        </ul>
+        <form class="d-flex" role="search">
+         <h4>Hello {{fullName}}</h4>   
+        </form>
+      </div>
+    </div>
+  </nav>
+<button class="btn btn-danger" (click)="logout()">Logout</button>
+<h1>This is dashboard</h1>
+<ul>
+    <li *ngFor="let user of users">
+        {{user.firstName}}-
+        {{user.lastName}}
+    </li>
+</ul>
+<br>
+<br>
+<br>
+<ng-container *ngIf="role=='admin'">
+<h2>This is important info only admin can see</h2>
+</ng-container>

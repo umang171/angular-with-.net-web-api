@@ -1,0 +1,47 @@
+<div class="outer">
+    <div class="container">
+        <div class="row">
+            <div class="offset-md-2 col-lg-5 col-md-5 offset-lg-4 offset-md-3">
+                <div class="panel border bg-white">
+                    <div class="panel-heading">
+                        <h3 class="pt-3 font-weight-bold">Sign Up</h3>
+                    </div>
+                    <div class="panel-body p-3">
+                        <form [formGroup]="signUpForm" (submit)="onSubmit()">
+                            <div class="form-group pt-3">
+                                <div class="input-field">
+                                    <span class="p-2">First Name</span>
+                                    <input formControlName="firstName" class="form-control" type="text" placeholder="First Name" [class.error]="signUpForm.controls['firstName'].touched && signUpForm.hasError('required','firstName')">
+                                    <small *ngIf="signUpForm.controls['firstName'].touched && signUpForm.hasError('required','firstName')" class="text-danger">First Name is required</small>
+                                </div>
+                                <div class="input-field">
+                                    <span class="p-2">Last Name</span>
+                                    <input formControlName="lastName" class="form-control" type="text" placeholder="Last Name" [class.error]="signUpForm.controls['lastName'].touched && signUpForm.hasError('required','lastName')">
+                                    <small *ngIf="signUpForm.controls['lastName'].touched && signUpForm.hasError('required','lastName')"  class="text-danger">Last Name is required</small>
+                                </div>
+                                <div class="input-field">
+                                    <span class="p-2">Email</span>
+                                    <input formControlName="email" class="form-control" type="email" placeholder="Email" [class.error]="signUpForm.controls['email'].touched && signUpForm.hasError('required','email')">
+                                    <small *ngIf="signUpForm.controls['email'].touched && signUpForm.hasError('required','email')" class="text-danger">Email is required</small>
+                                </div>
+                                <div class="input-field">
+                                    <span class="p-2">Username</span>
+                                    <input formControlName="username" class="form-control" type="text" placeholder="Username" [class.error]="signUpForm.controls['username'].touched && signUpForm.hasError('required','username')">
+                                    <small *ngIf="signUpForm.controls['username'].touched &&signUpForm.hasError('required','username')" class="text-danger">Username is required</small>
+                                </div>
+                                <div class="input-field">
+                                    <span class="p-2">Password</span>
+                                    <input formControlName="password" class="form-control" [type]="passwordType" placeholder="Password" [class.error]="signUpForm.controls['password'].touched && signUpForm.hasError('required','password')">
+                                    <span (click)="togglePassword()" class="p-1">{{toggleName}}</span><br>
+                                    <small *ngIf="signUpForm.controls['password'].touched && signUpForm.hasError('required','password')" class="text-danger">Password is required</small>
+                                </div>
+                            </div>
+                            <button class="btn btn-primary mt-3 w-100" type="submit">Login</button>
+                            <div class="text-center pt-4 textmuted">Already have an account? <a routerLink="/login" class="links" id="sign-up">Login</a></div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
